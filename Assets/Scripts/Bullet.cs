@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     Rigidbody rb;
     private Transform cam;
+    private CameraHandler camHandler;
 
     [SerializeField] private float minPushForce;
     [SerializeField] private float maxPushForce;
@@ -24,7 +25,8 @@ public class Bullet : MonoBehaviour
     private void Start()
         {
         rb = GetComponent<Rigidbody>();
-        cam = Camera.main.transform;
+        camHandler = CameraHandler.instance;
+        cam = camHandler.mainCamera;
         Cursor.lockState = CursorLockMode.Locked;
         
         rb.useGravity = false;
@@ -89,7 +91,12 @@ public class Bullet : MonoBehaviour
         {
         if (!moved)
             {
-            if (Input.GetMouseButtonDown(0)) isCharging = true;
+            if (Input.GetMouseButtonDown(0))
+                {
+                isCharging = true;
+                camHandler.Charging();
+                }
+
             if ((Input.GetMouseButtonUp(0) && isCharging) || chargeCurve.Evaluate(timeChargeCurve) >= 1) charged = true;
 
             if (isCharging)
@@ -101,7 +108,7 @@ public class Bullet : MonoBehaviour
                 }
             if (charged)
                 {
-                print(actualpushForce);
+                camHandler.EndCharging();
                 rb.velocity = Vector3.zero;
                 rb.AddForce(cam.forward * actualpushForce, ForceMode.Acceleration);
                 moved = true;
