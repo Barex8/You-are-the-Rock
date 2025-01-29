@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public static Bullet instance;
+
     Rigidbody rb;
     private Transform cam;
     private CameraHandler camHandler;
 
     [SerializeField] private float minPushForce;
     [SerializeField] private float maxPushForce;
-    private float actualpushForce;
+    [HideInInspector] public float actualpushForce;
     [SerializeField] private AnimationCurve chargeCurve;
     private float timeChargeCurve;
     private bool isCharging = false;
@@ -20,7 +22,12 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float antiGravityForce;
 
     private bool moved = false;   //Ha chocado y está en pausa
-    private bool hasStarted = false;  //Ha hecho el primer golpe
+    private bool hasStarted = true;  //Ha hecho el primer golpe
+
+    private void Awake()
+        {
+        instance = this;
+        }
 
     private void Start()
         {
@@ -61,8 +68,7 @@ public class Bullet : MonoBehaviour
         float elapsedTime = 0;
         rb.useGravity = false;
         Vector3 vel = rb.velocity;
-        print(vel);
-        //rb.velocity = Vector3.zero;
+        //rb.velocity = Vector3.zero;  ////
 
         while (elapsedTime < timeSlow)
             {
@@ -81,7 +87,7 @@ public class Bullet : MonoBehaviour
         {
         if (Input.GetMouseButtonDown(0))
             {
-            rb.AddForce(cam.forward * maxPushForce, ForceMode.Acceleration);
+            rb.AddForce(cam.forward * maxPushForce, ForceMode.Impulse);
             moved = true;
             rb.useGravity = true;
             hasStarted = true;
@@ -108,14 +114,15 @@ public class Bullet : MonoBehaviour
                 }
             if (charged)
                 {
-                camHandler.EndCharging();
-                rb.velocity = Vector3.zero;
-                rb.AddForce(cam.forward * actualpushForce, ForceMode.Acceleration);
+                //rb.velocity = Vector3.zero;
+                rb.useGravity = true;
+                rb.AddForce(cam.forward * actualpushForce, ForceMode.Impulse);
                 moved = true;
                 timeChargeCurve = 0;
-                rb.useGravity = true;
                 charged = false;
                 isCharging = false;
+
+                camHandler.EndCharging();
                 }
             }
         }
