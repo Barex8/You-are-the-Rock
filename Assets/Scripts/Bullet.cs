@@ -24,6 +24,9 @@ public class Bullet : MonoBehaviour
     private bool moved = false;   //Ha chocado y está en pausa
     private bool hasStarted = true;  //Ha hecho el primer golpe
 
+    [Header("Gizmo")]
+    [SerializeField] private float maxDistance;
+
     private void Awake()
         {
         instance = this;
@@ -34,7 +37,6 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         camHandler = CameraHandler.instance;
         cam = camHandler.mainCamera;
-        Cursor.lockState = CursorLockMode.Locked;
         
         rb.useGravity = false;
         }
@@ -55,26 +57,32 @@ public class Bullet : MonoBehaviour
         {
         if (collision.transform.CompareTag("Enemy"))
             {
-            Destroy(collision.gameObject);
+            collision.transform.GetComponent<Target>().GetHit();
             }
+        else
+            {
+            transform.forward = collision.impulse;
+            moved = false;
+            StartCoroutine(SlowMov());
+            }
+        SoundManager.instance.PlaySound(collision.collider.sharedMaterial, true);
 
-        transform.forward = collision.impulse;
-        moved = false;
-        StartCoroutine(SlowMov());
         }
 
     private IEnumerator SlowMov()
         {
+        yield return new WaitForSeconds(.1f);
         float elapsedTime = 0;
         rb.useGravity = false;
         Vector3 vel = rb.velocity;
         //rb.velocity = Vector3.zero;  ////
+        rb.velocity = vel / 10;
 
         while (elapsedTime < timeSlow)
             {
             elapsedTime += Time.deltaTime;
             
-            rb.AddForce(Vector3.up * antiGravityForce,ForceMode.Acceleration);
+            //rb.AddForce(Vector3.up * antiGravityForce,ForceMode.Acceleration);
             
             if (Input.GetMouseButtonUp(0)) break;
             yield return null;
@@ -125,6 +133,11 @@ public class Bullet : MonoBehaviour
                 camHandler.EndCharging();
                 }
             }
+        }
+    private void OnDrawGizmos()
+        {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position,maxDistance);
         }
 
     }

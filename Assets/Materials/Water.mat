@@ -8,13 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Water
-  m_Shader: {fileID: 4800000, guid: 313fcf3aebc04cf4ab4f8c5f2850be7f, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 27b042674da390c46a1ff4cc2317d5f2,
+    type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2950
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -82,13 +83,25 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Vector1_29A8EAB: 1.15
+    - Vector1_3C2CF0EB: 0.0091
+    - Vector1_53B9698E: 1.3
+    - Vector1_6D9DC178: 149.01
+    - Vector1_93DCFAA9: 0.94
+    - Vector1_95BBCBE0: 985.34
+    - Vector1_C5543ECF: 3.19
+    - Vector1_E23798DE: 0.18
+    - _Absorption_Coefficent: 0
+    - _Alpha: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
+    - _CastShadows: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
+    - _Depth: 1.48
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -103,7 +116,7 @@ Material:
     - _OutlineWidth: 0.156
     - _Parallax: 0.005
     - _QueueControl: 0
-    - _QueueOffset: 0
+    - _QueueOffset: -50
     - _ReceiveShadows: 1
     - _RimStep: 0
     - _RimStepSmooth: 0
@@ -118,8 +131,14 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
+    - _ZTest: 4
     - _ZWrite: 1
+    - _ZWriteControl: 0
     m_Colors:
+    - Color_A271762B: {r: 0.094117135, g: 0.4433962, b: 0.15119848, a: 0.9215686}
+    - Color_AFFD055F: {r: 0.47419012, g: 0.9056604, b: 0.48008624, a: 1}
+    - Color_E0824245: {r: 0.1509434, g: 0.056179456, b: 0.017799927, a: 0.4823529}
+    - _Absorption_Color: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.27450982, g: 0.85882354, b: 0.5686275, a: 1}
     - _Color: {r: 0.4229263, g: 0.9056604, b: 0.7415459, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
@@ -127,6 +146,7 @@ Material:
     - _RimColor: {r: 0.65281236, g: 0.8490566, b: 0.8336674, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+    - _WaterColor: {r: 0.27450976, g: 0.8588235, b: 0.5686274, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5912116383539246000
 MonoBehaviour:

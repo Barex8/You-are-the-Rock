@@ -28,13 +28,11 @@ public class ProjectileThrow : MonoBehaviour
     void Predict()
     {
         trajectoryPredictor.PredictTrajectory(ProjectileData());
-        print("Prediciendo");
     }
 
     ProjectileProperties ProjectileData()
     {
         ProjectileProperties properties = new ProjectileProperties();
-        print(transform.name);
         Rigidbody r = objectToThrow.GetComponent<Rigidbody>();
 
         properties.direction = StartPosition.forward;
