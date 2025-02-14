@@ -21,7 +21,8 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
         {
-        instance = this;
+        if(instance == null)instance = this;
+        else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         }
 
@@ -51,8 +52,28 @@ public class SoundManager : MonoBehaviour
             if (audioSourcePool.Count > 0)
                 {
                 audioSourceToUse = audioSourcePool.Dequeue();
-                if (modPitch) audioSourceToUse.pitch = UnityEngine.Random.Range(.5f, 1.5f);
+                if (modPitch) audioSourceToUse.pitch = UnityEngine.Random.Range(.8f, 1.2f);
                 audioSourceToUse.PlayOneShot(clip);
+                }
+            StartCoroutine(ReturnToPoolAfterPlayback(audioSourceToUse));
+            }
+        else
+            {
+            Debug.LogWarning($"No se encontró un AudioClip con la clave: {key}");
+            }
+        }
+
+    public void PlaySound(AudioClip key, bool modPitch)
+        {
+        AudioSource audioSourceToUse = null;
+
+        if (key != null)
+            {
+            if (audioSourcePool.Count > 0)
+                {
+                audioSourceToUse = audioSourcePool.Dequeue();
+                if (modPitch) audioSourceToUse.pitch = UnityEngine.Random.Range(.8f, 1.2f);
+                audioSourceToUse.PlayOneShot(key);
                 }
             StartCoroutine(ReturnToPoolAfterPlayback(audioSourceToUse));
             }

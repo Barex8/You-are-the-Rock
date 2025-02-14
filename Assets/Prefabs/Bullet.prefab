@@ -297,3 +297,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeSlow: 3
   antiGravityForce: 0.1
+  waterAudioClip: {fileID: 0}
+  waterParticles: {fileID: 4841310747376396034, guid: c29d6ba8aef411f42a9ce6b188bdd209,
+    type: 3}
+  maxDistance: 72

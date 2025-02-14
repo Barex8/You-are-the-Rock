@@ -23,6 +23,10 @@ public class Bullet : MonoBehaviour
 
     private bool moved = false;   //Ha chocado y está en pausa
     private bool hasStarted = true;  //Ha hecho el primer golpe
+    private bool targetHitted = false;
+
+    [SerializeField] private AudioClip waterAudioClip;
+    [SerializeField] private Transform waterParticles;
 
     [Header("Gizmo")]
     [SerializeField] private float maxDistance;
@@ -39,6 +43,19 @@ public class Bullet : MonoBehaviour
         cam = camHandler.mainCamera;
         
         rb.useGravity = false;
+        rb.velocity = Vector3.zero;
+        }
+
+    private void OnEnable()
+        {
+        if (rb != null)
+            {
+            rb.useGravity = false;
+            rb.velocity = Vector3.zero;
+            moved = false;
+            }
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        //hasStarted = false;
         }
 
     void Update()
@@ -58,6 +75,7 @@ public class Bullet : MonoBehaviour
         if (collision.transform.CompareTag("Enemy"))
             {
             collision.transform.GetComponent<Target>().GetHit();
+            targetHitted = true;
             }
         else
             {
@@ -67,6 +85,28 @@ public class Bullet : MonoBehaviour
             }
         SoundManager.instance.PlaySound(collision.collider.sharedMaterial, true);
 
+        }
+
+    private void OnTriggerEnter(Collider other)
+        {
+        if (other.transform.CompareTag("Water") && !targetHitted)
+            {
+            print("Ha atravesado el agua");
+            //Particulas
+            //La camara se queda quieta unos segundos
+            GameManager.instance.UnbindCamera();
+            Instantiate(waterParticles, transform.position, Quaternion.Euler(-90, 0, 0));
+            SoundManager.instance.PlaySound(waterAudioClip, true);
+            //Se reinicia
+            StartCoroutine(ResetScene());
+            }
+        }
+
+    private IEnumerator ResetScene()
+        {
+        yield return new WaitForSeconds(3f);
+        GameManager.instance.ResetScene();
+        GameManager.instance.ResetCameraView();
         }
 
     private IEnumerator SlowMov()
