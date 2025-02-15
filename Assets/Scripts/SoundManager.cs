@@ -4,10 +4,16 @@ using UnityEngine;
 using System.Globalization;
 using System;
 using UnityEngine.Events;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
     {
     public static SoundManager instance;
+
+    [Header("Audio Mixers")]
+    [SerializeField] private AudioMixerGroup mixerMusic;
+    [SerializeField] private AudioMixerGroup mixerFX;
 
     [SerializeField] private List<PhysicMaterial> physicsMaterials = new List<PhysicMaterial>();
     [SerializeField] private List<AudioClip> clips = new List<AudioClip>();
@@ -15,20 +21,28 @@ public class SoundManager : MonoBehaviour
 
     private Dictionary<PhysicMaterial, AudioClip> hitClips = new Dictionary<PhysicMaterial, AudioClip>();
 
-    //El pool es para tener varios audioSources y poder emitir varios sonidos a la vez, no creamos e destruimos objetos porque es menos eficiente.
+    //El pool es para tener varios audioSources y poder emitir varios sonidos a la vez, no creamos y destruimos objetos porque es menos eficiente.
     [SerializeField] private int poolSize = 10; // Número de AudioSources en el pool
     private Queue<AudioSource> audioSourcePool;
+
+
+    [Header("Settings Stuff")]
+    [SerializeField] private AudioMixerGroup audioMixer;
+    [SerializeField] private Slider sliderVolume;
 
     private void Awake()
         {
         if(instance == null)instance = this;
         else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+
+        audioMixer.audioMixer.SetFloat("Volume", PlayerPrefs.GetFloat("Volume",50));
+        if(sliderVolume) sliderVolume.value = PlayerPrefs.GetFloat("Volume",50);
+
         }
 
     private void Start()
         {
-
         for (int i = 0; i < physicsMaterials.Count; i++)
             {
             hitClips.Add(physicsMaterials[i], clips[i]); 
@@ -43,7 +57,7 @@ public class SoundManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         }
 
-    public void PlaySound(PhysicMaterial key, bool modPitch)
+    public void PlaySound(PhysicMaterial key, bool modPitch,bool music)
         {
         AudioSource audioSourceToUse = null;
         
@@ -52,6 +66,10 @@ public class SoundManager : MonoBehaviour
             if (audioSourcePool.Count > 0)
                 {
                 audioSourceToUse = audioSourcePool.Dequeue();
+
+                if (music) audioSourceToUse.outputAudioMixerGroup = mixerMusic;
+                else audioSourceToUse.outputAudioMixerGroup = mixerFX;
+
                 if (modPitch) audioSourceToUse.pitch = UnityEngine.Random.Range(.8f, 1.2f);
                 audioSourceToUse.PlayOneShot(clip);
                 }
@@ -112,6 +130,12 @@ public class SoundManager : MonoBehaviour
 
         // Devolverlo al pool
         audioSourcePool.Enqueue(source);
+        }
+
+    public void Volume(float volume)
+        {
+        audioMixer.audioMixer.SetFloat("Volume", volume);
+        PlayerPrefs.SetFloat("Volume", volume);
         }
 
 

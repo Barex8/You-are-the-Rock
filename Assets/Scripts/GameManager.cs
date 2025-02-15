@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +18,15 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private bool lockCursor;
 
+    [Header("Settings Stuff")]
+    [SerializeField] private TMP_Dropdown ddResolution;
+    Resolution[] resolutions;
+    [SerializeField] private Toggle toggleFullscreen;
+
+    [SerializeField] private Button continueBt;
+
+
+
     private void Start()
         {
         if(lockCursor)Cursor.lockState = CursorLockMode.Locked;
@@ -23,11 +35,16 @@ public class GameManager : MonoBehaviour
     private void Awake()
         {
         instance = this;
+        if (ddResolution != null) ManagerResolution();
+        if(continueBt != null && PlayerPrefs.GetString("Level") == "") continueBt.interactable = false;
+
+        Screen.fullScreen = PlayerPrefs.GetInt("fullscreen") == 1 ? true : false;
         }
 
     public void ChangeScene(string sceneName)
         {
         SceneManager.LoadScene(sceneName);
+        PlayerPrefs.SetString("Level", sceneName);
         }
 
     public void ResetScene()
@@ -66,7 +83,65 @@ public class GameManager : MonoBehaviour
     //Menú
     public void ContinueBt()
         {
-        SceneManager.LoadScene("Level-1 1");
+        SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
+        }
+
+    public void NewGame()
+        {
+        PlayerPrefs.SetString("Level", "Level-1 1");
+        SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
+        //Borrar partida anterior
+        }
+
+    public void Settings()
+        {
+         //Abre la ventana de Settings
+        }
+
+    public void Exit()
+        {
+        Application.Quit();
+        }
+
+
+    void ManagerResolution()
+        {
+        resolutions = Screen.resolutions;             //Posibles resoluciones de unity
+        ddResolution.ClearOptions();
+        List<string> options = new List<string>();
+        int currentResolutionIndex = 0;
+        for (int i = 0; i < resolutions.Length; i++)
+            {
+            string option = resolutions[i].width + "x" + resolutions[i].height;
+            options.Add(option);
+
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+                {
+                if (PlayerPrefs.GetInt("firstResolution") != 1) currentResolutionIndex = i;
+                else currentResolutionIndex = PlayerPrefs.GetInt("indexResolution");
+
+                }
+            }
+
+        ddResolution.AddOptions(options);
+        ddResolution.value = currentResolutionIndex;
+        ddResolution.RefreshShownValue();
+
+        PlayerPrefs.SetInt("firstResolution", 1);
+        }
+
+    public void SetResolution(int resolutionIndex)
+        {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        PlayerPrefs.SetInt("indexResolution", resolutionIndex);
+        }
+
+    
+    public void SetFullscreen(bool isFullscreen)
+        {
+        Screen.fullScreen = isFullscreen;
+        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0);
         }
 
     }

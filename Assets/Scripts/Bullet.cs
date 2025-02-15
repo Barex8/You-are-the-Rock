@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float antiGravityForce;
 
     private bool moved = false;   //Ha chocado y está en pausa
-    private bool hasStarted = true;  //Ha hecho el primer golpe
+    //private bool hasStarted = true;  //Ha hecho el primer golpe, de momento no lo voy a usar, pero puede que cambie de opinión
     private bool targetHitted = false;
 
     [SerializeField] private AudioClip waterAudioClip;
@@ -55,20 +55,13 @@ public class Bullet : MonoBehaviour
             moved = false;
             }
         transform.rotation = Quaternion.Euler(0, 0, 0);
-        //hasStarted = false;
         }
 
     void Update()
     {
-        if (!hasStarted)
-            {
-            FirstPush();
-            }
-        else
-            {
-            ForceMouseHandler();
-            }
-        }
+    ForceMouseHandler();
+
+    }
 
     private void OnCollisionEnter(Collision collision)
         {
@@ -83,7 +76,7 @@ public class Bullet : MonoBehaviour
             moved = false;
             StartCoroutine(SlowMov());
             }
-        SoundManager.instance.PlaySound(collision.collider.sharedMaterial, true);
+        SoundManager.instance.PlaySound(collision.collider.sharedMaterial, true,false);
 
         }
 
@@ -91,13 +84,11 @@ public class Bullet : MonoBehaviour
         {
         if (other.transform.CompareTag("Water") && !targetHitted)
             {
-            print("Ha atravesado el agua");
-            //Particulas
             //La camara se queda quieta unos segundos
             GameManager.instance.UnbindCamera();
             Instantiate(waterParticles, transform.position, Quaternion.Euler(-90, 0, 0));
             SoundManager.instance.PlaySound(waterAudioClip, true);
-            //Se reinicia
+            //Se espera y se reinicia
             StartCoroutine(ResetScene());
             }
         }
@@ -115,15 +106,12 @@ public class Bullet : MonoBehaviour
         float elapsedTime = 0;
         rb.useGravity = false;
         Vector3 vel = rb.velocity;
-        //rb.velocity = Vector3.zero;  ////
         rb.velocity = vel / 10;
 
+        //Espera un tiempo a "camara lenta", pero si pulsas click para volve a lanzarte se corta el bucle
         while (elapsedTime < timeSlow)
             {
-            elapsedTime += Time.deltaTime;
-            
-            //rb.AddForce(Vector3.up * antiGravityForce,ForceMode.Acceleration);
-            
+            elapsedTime += Time.deltaTime;            
             if (Input.GetMouseButtonUp(0)) break;
             yield return null;
             }
@@ -131,16 +119,17 @@ public class Bullet : MonoBehaviour
         rb.useGravity = true;
         }
 
-    private void FirstPush()
+    /*private void FirstPush()
         {
         if (Input.GetMouseButtonDown(0))
             {
             rb.AddForce(cam.forward * maxPushForce, ForceMode.Impulse);
             moved = true;
             rb.useGravity = true;
-            hasStarted = true;
+            //hasStarted = true;
             }
-        }
+        }       */
+
     private void ForceMouseHandler()
         {
         if (!moved)
