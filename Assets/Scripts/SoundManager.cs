@@ -35,14 +35,13 @@ public class SoundManager : MonoBehaviour
         if(instance == null)instance = this;
         else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-
-        audioMixer.audioMixer.SetFloat("Volume", PlayerPrefs.GetFloat("Volume",50));
-        if(sliderVolume) sliderVolume.value = PlayerPrefs.GetFloat("Volume",50);
-
         }
 
     private void Start()
         {
+        audioMixer.audioMixer.SetFloat("Volume", PlayerPrefs.GetFloat("Volume", 50));
+        if (sliderVolume) sliderVolume.value = PlayerPrefs.GetFloat("Volume", 50);
+
         for (int i = 0; i < physicsMaterials.Count; i++)
             {
             hitClips.Add(physicsMaterials[i], clips[i]); 

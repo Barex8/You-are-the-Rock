@@ -7,7 +7,7 @@ public class Target : MonoBehaviour
     [SerializeField] private NPCConversation conversation;
     public void GetHit()
         {
-        ConversationManager.Instance.StartConversation(conversation);
+        if(conversation != null) ConversationManager.Instance.StartConversation(conversation);
         GameManager.instance.TargetHit();
         }
 }

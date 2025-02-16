@@ -6,17 +6,21 @@ using Cinemachine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.Audio;
+using DialogueEditor;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    private Vector3 initialPos;
 
     [Header("Transition Scenes")]
     [SerializeField] public CinemachineFreeLook cFL;
     [SerializeField] private Volume blurVolume;
 
     [SerializeField] private bool lockCursor;
+
+    [SerializeField] private NPCConversation startConversation;
 
     [Header("Settings Stuff")]
     [SerializeField] private TMP_Dropdown ddResolution;
@@ -26,10 +30,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button continueBt;
 
 
-
     private void Start()
         {
         if(lockCursor)Cursor.lockState = CursorLockMode.Locked;
+        if (startConversation)
+            {
+            ConversationManager.Instance.StartConversation(startConversation);
+            UnbindCamera();
+            }
+        if(Bullet.instance != null)initialPos = Bullet.instance.transform.position;
+
         }
 
     private void Awake()
@@ -54,7 +64,7 @@ public class GameManager : MonoBehaviour
         blurVolume.enabled = false;
         cFL.enabled = true;
         Bullet.instance.enabled = true;
-        Bullet.instance.transform.position = new Vector3(0, 5.37f, 0);
+        Bullet.instance.transform.position = initialPos;
         CameraHandler.instance.enabled = true;
         }
 
