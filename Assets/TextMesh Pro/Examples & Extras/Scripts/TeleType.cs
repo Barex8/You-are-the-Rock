@@ -18,6 +18,8 @@ namespace TMPro.Examples
 
         private TMP_Text m_textMeshPro;
 
+        [SerializeField] private float charVelocity = 0.025f;
+
 
         void Awake()
         {
@@ -73,7 +75,7 @@ namespace TMPro.Examples
 
                 counter += 1;
 
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(charVelocity);
             }
 
             //Debug.Log("Done revealing the text.");

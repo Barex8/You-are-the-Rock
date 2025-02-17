@@ -69,6 +69,7 @@ public class Bullet : MonoBehaviour
             {
             collision.transform.GetComponent<Target>().GetHit();
             targetHitted = true;
+            enabled = false;
             }
         else
             {
@@ -87,9 +88,10 @@ public class Bullet : MonoBehaviour
             //La camara se queda quieta unos segundos
             GameManager.instance.UnbindCamera();
             Instantiate(waterParticles, transform.position, Quaternion.Euler(-90, 0, 0));
-            SoundManager.instance.PlaySound(waterAudioClip, true);
             //Se espera y se reinicia
             StartCoroutine(ResetScene());
+
+            SoundManager.instance.PlaySound(waterAudioClip, true);
             }
         }
 

@@ -18,8 +18,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] public CinemachineFreeLook cFL;
     [SerializeField] private Volume blurVolume;
 
-    [SerializeField] private bool lockCursor;
-
     [SerializeField] private NPCConversation startConversation;
 
     [Header("Settings Stuff")]
@@ -32,12 +30,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
         {
-        if(lockCursor)Cursor.lockState = CursorLockMode.Locked;
-        if (startConversation)
-            {
-            ConversationManager.Instance.StartConversation(startConversation);
-            UnbindCamera();
-            }
+        if (startConversation) ShowDialog(startConversation);
+           
         if(Bullet.instance != null)initialPos = Bullet.instance.transform.position;
 
         }
@@ -88,6 +82,14 @@ public class GameManager : MonoBehaviour
         {
         cFL.m_YAxis.Value = .5f;
         cFL.m_XAxis.Value = 0;
+        }
+
+    public void ShowDialog(NPCConversation conversation)
+        {
+        ConversationManager.Instance.StartConversation(conversation);
+        UnbindCamera();
+        blurVolume.enabled = true;
+        Cursor.lockState = CursorLockMode.None;
         }
 
     //Menú

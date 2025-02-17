@@ -142,35 +142,15 @@ PrefabInstance:
       propertyPath: startConversation
       value: 
       objectReference: {fileID: 2003321181}
-    - target: {fileID: 3900108754126588195, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_text
-      value: Well son, here we are! Are your ready for your first class?
-      objectReference: {fileID: 0}
-    - target: {fileID: 3900108754126588195, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 24.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3900108754126588195, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3900108755108334224, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4762948378342235681, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: -0.7902918
+      value: -0.4436637
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378342235681, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -5.866936
+      value: -5.957095
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378342235681, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
@@ -180,12 +160,12 @@ PrefabInstance:
     - target: {fileID: 4762948378449239139, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: -0.7902918
+      value: -0.4436637
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378449239139, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -5.866936
+      value: -5.957095
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378449239139, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
@@ -290,32 +270,32 @@ PrefabInstance:
     - target: {fileID: 4762948378593158853, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7902918
+      value: -0.4436636
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378593158853, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1330638
+      value: 0.042904854
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378593158853, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9963779
+      value: 0.99846804
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378593158853, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08503601
+      value: -0.055331845
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378593158853, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -3.9125114e-10
+      value: -0.0000000021475028
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378593158853, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -3.339136e-11
+      value: -1.1900762e-10
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378685568115, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
@@ -325,42 +305,42 @@ PrefabInstance:
     - target: {fileID: 4762948378685568115, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7902918
+      value: -0.4436636
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378685568115, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1330638
+      value: 0.042904854
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378685568115, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9946712
+      value: 0.9972999
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378685568115, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.10309776
+      value: -0.0734364
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378685568115, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 9.123183e-10
+      value: 0.000000017688045
       objectReference: {fileID: 0}
     - target: {fileID: 4762948378685568115, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 9.4561754e-11
+      value: 0.0000000013024631
       objectReference: {fileID: 0}
     - target: {fileID: 4762948379274938696, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_FollowOffset.y
-      value: -0.7902918
+      value: -0.4436637
       objectReference: {fileID: 0}
     - target: {fileID: 4762948379274938696, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_FollowOffset.z
-      value: -5.866936
+      value: -5.957095
       objectReference: {fileID: 0}
     - target: {fileID: 4762948379274938696, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
@@ -410,72 +390,32 @@ PrefabInstance:
     - target: {fileID: 4762948379833885523, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7902918
+      value: -0.4436636
       objectReference: {fileID: 0}
     - target: {fileID: 4762948379833885523, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1330638
+      value: 0.042904854
       objectReference: {fileID: 0}
     - target: {fileID: 4762948379833885523, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9977598
+      value: 0.9993093
       objectReference: {fileID: 0}
     - target: {fileID: 4762948379833885523, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.06689834
+      value: -0.03716107
       objectReference: {fileID: 0}
     - target: {fileID: 4762948379833885523, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000037169454
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4762948379833885523, guid: da3acc033d9f7134192b0588dae8dc6a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 2.4921576e-10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116449484838474163, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_fontStyle
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116449484838474163, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116449484838474163, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116449484838474163, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116449484838474163, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 6116449484838474163, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449887092223605206, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 156.3557
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449887092223605206, guid: da3acc033d9f7134192b0588dae8dc6a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 98.177795
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da3acc033d9f7134192b0588dae8dc6a, type: 3}
@@ -491,25 +431,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1814699234}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &666875922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666875915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls: []
-  NodeID: 1
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
-  Audio: {fileID: 0}
 --- !u!114 &666875923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,29 +447,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!114 &666875924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666875915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls: []
-  NodeID: 2
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
-  Audio: {fileID: 0}
---- !u!114 &666875925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -575,7 +477,7 @@ MonoBehaviour:
           m_StringArgument: Level-1 2
           m_BoolArgument: 0
         m_CallState: 2
-  NodeID: 4
+  NodeID: 5
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
@@ -592,7 +494,7 @@ GameObject:
   - component: {fileID: 932249954}
   - component: {fileID: 932249957}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,23 +839,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 5
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":117,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Has
-    tocado el objetivo","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Character
-    1","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":110.5,"yPos":162},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Bien
-    hecho hijo","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Character
-    1","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":103.5,"yPos":317},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Gracias
-    papa","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Character
-    2","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":102.5,"yPos":445},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":null,"parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  CurrentIDCounter: 6
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":81,"yPos":130},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":null,"parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":true,"xPos":82,"yPos":20},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Well
+    done buddy.\nLet''s move to the next one.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: 
+  DefaultName: <color=#46DB8D>Dad:</color>
   DefaultSprite: {fileID: 0}
   DefaultFont: {fileID: 0}
   NodeSerializedDataList:
   - {fileID: 666875923}
-  - {fileID: 666875922}
   - {fileID: 666875924}
-  - {fileID: 666875925}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
@@ -1158,20 +1053,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 12
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":244.5,"yPos":522},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Continue","parentUIDs":[11],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":235.5,"yPos":-504},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Well
-    son, here we are! Are your ready for your first class?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":239.5,"yPos":-392},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Can
-    you explain me again why are we here?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Robory:","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":239.5,"yPos":-267},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Did
-    you gorget? I''m preparing you for the next...","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":242.5,"yPos":-159},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"MAYOR''S
-    GOLF CHAMPIONSHIP","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":238,"yPos":-46},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"...","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"...","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":241,"yPos":71},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"That
-    event where the winner can get the mayor''s young hot secret daughter?","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Robory:","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":242,"yPos":172},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Umm...
-    I see you remember very well... anyways, we will find you a preatty leady!","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":239,"yPos":272},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"This
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":101,"yPos":1048},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Continue","parentUIDs":[11],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":92,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Well
+    son, here we are! Are your ready for your first class?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":96,"yPos":134},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Can
+    you explain me again why are we here?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#DB5546>Robory:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":96,"yPos":259},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Did
+    you forget? I''m preparing you for the next...","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":99,"yPos":367},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"MAYOR''S
+    GOLF CHAMPIONSHIP","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":94.5,"yPos":480},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"...","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"...","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":97.5,"yPos":597},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"That
+    event where the winner can get the mayor''s young hot secret daughter?","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#DB5546>Robory:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":68.5,"yPos":692},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Umm...
+    I see you remember very well... anyways, we will find you a preatty leady!","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":95.5,"yPos":798},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"This
     is the last chance for him to get a girlfriend, maybe then he will be independent
     from home.","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#599C79>Dad''s
-    mind:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":244,"yPos":389},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Let''s
+    mind:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":89.5,"yPos":904},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Let''s
     start. The first you need to know is that you have to hit the target with your
     golf ball. Aim to the target and press Click. Izq.","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"<color=#46DB8D>Dad:<\/color>","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Dad
+  DefaultName: <color=#46DB8D>Dad:</color>
   DefaultSprite: {fileID: 0}
   DefaultFont: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   NodeSerializedDataList:
